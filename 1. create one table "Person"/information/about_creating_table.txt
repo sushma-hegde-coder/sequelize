@@ -1,0 +1,10 @@
+Db: Humans
+Table: People
+
+personName
+sushma
+rashmi
+ram
+
+
+
