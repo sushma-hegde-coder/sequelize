@@ -1,0 +1,11 @@
+JWT : tokens : generated on server side (but not stored anywhere on server)
+
+JWT
+1. user from the browser client side makes a login request
+2. after the successful login server returns a token (JWT)
+3. client side takes the token & stores it locally (inside the browser using cookies/storage)
+4. user fetches the protected data from the server by passing the token along with the request (headers)
+5. the server validates the token whether it is valid/invalid, whether it has expired or not
+6. if the token is invalid/expired server returns a response saying unautorized request to the user/client/browser (401)
+7. if the token was valid server returns the data requested by the user
+
