@@ -1,1 +1,2 @@
 1. In postman while adding data to db look whehter you are sending in body or not. Body should be in green color
+2. to all columns defined, for each use {} don't forget. should be enclosed within {}
