@@ -22,7 +22,13 @@ async function testDbConnectivity() {
 const db = {};
 db.Sequelize = Sequelize;
 db.sequelize = sequelize;
-db.listener = require("./listener.model")(sequelize);
-db.recording = require("./recording.model")(sequelize);
+db.employee = require("./employee.model")(sequelize);
+db.department = require("./department.model")(sequelize);
+
+// console.log(`employee ${db.employee},department ${db.deparment}`);
+db.employee.hasMany(db.department, { foreignKey: "empId" });
+db.department.belongsTo(db.employee, { foreignKey: "empId" });
+
+//console.log("db",db);
 
 module.exports = db;

@@ -1,4 +1,4 @@
 module.exports = {
-  employeeRouter: require("./employee.routes"),
-  departmentRouter: require("./department.routes"),
+  listenerRouter: require("./listener.routes"),
+  recordingRouter: require("./recording.routes"),
 };

@@ -1,13 +1,10 @@
 const express = require("express");
 const db = require("./src/model");
-const { listenerRouter, recordingRouter } = require("./src/routes");
-const authMiddleware = require("./src/middleware/auth-middleware");
+const { employeeRouter, departmentRouter } = require("./src/routes");
 
 const app = express();
 
-const PORT_NUMBER = 3000;
-
-app.use(authMiddleware);
+const PORT_NUMBER = 4000;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -15,8 +12,8 @@ app.use(express.urlencoded({ extended: true }));
 db.sequelize.sync();
 //db.sequelize.sync({ force: true });
 
-app.use("/listener", listenerRouter);
-app.use("/sushma", recordingRouter);
+app.use("/employee", employeeRouter);
+app.use("/department", departmentRouter);
 
 app.listen(PORT_NUMBER, (err) => {
   if (err) throw err;
