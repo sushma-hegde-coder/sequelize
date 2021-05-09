@@ -3,6 +3,7 @@
 3. datatypes that can be made primary key : 
    don't make TEXT,STRING datatypes as pk  -- unique: true
 4. Don't write get at the end. it will not work. Write get at the beginning of a router.
+5. After writing associations hasOne,hasMany,belongsTo go and check in mysql workbench. Go to table . Send SQL editor, Create statement
 
 
 
