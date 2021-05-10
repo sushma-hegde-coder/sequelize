@@ -1,5 +1,5 @@
 const { product } = require("../models");
-const getPagination = (page, size) => {
+const getPagination = (page, size) => { 
   const limit = size ? +size : 10;
   const offset = page ? (page - 1) * limit : 0; //how many records you should skip 
   return { limit, offset };
