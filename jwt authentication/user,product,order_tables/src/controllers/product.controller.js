@@ -1,7 +1,7 @@
 const { product } = require("../models");
 const getPagination = (page, size) => {
   const limit = size ? +size : 10;
-  const offset = page ? (page - 1) * limit : 0;
+  const offset = page ? (page - 1) * limit : 0; //how many records you should skip 
   return { limit, offset };
 };
 const getPagingData = (data, page, limit) => {
@@ -68,7 +68,7 @@ const getById = async (req, res) => {
 };
 const bulkInsert = async (req, res) => {
   try {
-    await product.bulkCreate(req.body);
+    await product.bulkCreate(req.body); //req.body paste the data from https://v1gv8.csb.app/
     return res.status(200).json({ message: "Success" });
   } catch (e) {
     return res.status(400).json(e);
